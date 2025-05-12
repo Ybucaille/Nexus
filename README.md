@@ -6,6 +6,16 @@ Conçu comme un esprit artificiel capable d’évoluer, de comprendre, de raison
 
 ---
 
+- [🧬 Manifeste](#-manifeste)
+- [🧠 Capacités visées](#-capacités-visées)
+- [📜 Principes fondamentaux](#-principes-fondamentaux)
+- [🔮 Vision long terme](#-ce-que-nexus-deviendra)
+- [🧩 Modules](#-modules-du-projet)
+- [📂 Structure](#-structure-de-base)
+- [📌 Statut actuel](#-statut-actuel)
+
+---
+
 ## 🧬 Manifeste
 
 > _“Nexus, c’est ta pensée. Avec du code autour.”_
@@ -83,11 +93,28 @@ nexus/
 
 ## 📌 Statut actuel
 
-- 🔧 Dépendances installées
-- 📊 Modules priorisés avec planning réaliste
 - 🧠 Mémoire semi-persistante fonctionnelle
-- 🗂️ Fine-tuning GPT en cours de préparation
+
+---
+
+## 🛠️ Prochaines étapes
+
+- [ ] Intégration d’une mémoire vectorielle locale
+- [ ] Système de feedback réflexif sur chaque réponse
+- [ ] Générateur autonome de prompts
+- [ ] Export JSONL pour fine-tuning personnalisé
+      
+---
+
+> ✨ *Exemple de sortie actuelle :*  
+> « Nexus : Je me suis rendu compte que je réponds mieux quand je reformule d’abord l’intention implicite. »
 
 ---
 
 ## 🤝 Conçu par un humain. Pour un humain. Et pour penser mieux ensemble.
+
+---
+
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Made with Python](https://img.shields.io/badge/Made%20with-Python-3776AB?logo=python&logoColor=white)
+
