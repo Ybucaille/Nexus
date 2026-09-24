@@ -1,120 +1,254 @@
+# Nexus
 
-# 🤖 Nexus — Intelligence personnelle modulaire et locale
+### Une intelligence personnelle, local-first, modulaire et construite pour durer.
 
-**Nexus** est un projet d'intelligence artificielle personnelle, indépendante et éthique.  
-Conçu comme un esprit artificiel capable d’évoluer, de comprendre, de raisonner, et d’interagir intelligemment avec son créateur humain.
+Nexus est un projet d'assistant personnel conçu autour d'une idée simple :
 
----
+> Une IA utile ne devrait pas seulement répondre à des messages.  
+> Elle devrait pouvoir comprendre un contexte, conserver une continuité, utiliser des capacités adaptées et agir de manière contrôlée.
 
-- [🧬 Manifeste](#-manifeste)
-- [🧠 Capacités visées](#-capacités-visées)
-- [📜 Principes fondamentaux](#-principes-fondamentaux)
-- [🔮 Vision long terme](#-ce-que-nexus-deviendra)
-- [🧩 Modules](#-modules-du-projet)
-- [📂 Structure](#-structure-de-base)
-- [📌 Statut actuel](#-statut-actuel)
+Le projet cherche donc moins à construire **un chatbot de plus** qu'un runtime capable de relier modèles, mémoire, outils, projets et interfaces dans un système cohérent.
+
+Nexus est encore en développement.  
+L'objectif actuel n'est pas de prétendre avoir résolu l'assistant personnel idéal, mais d'en construire progressivement les fondations.
 
 ---
 
-## 🧬 Manifeste
+## Pourquoi Nexus ?
 
-> _“Nexus, c’est ta pensée. Avec du code autour.”_
+Les assistants modernes sont extrêmement capables, mais leur intelligence reste souvent enfermée dans une conversation.
 
-- **Nom :** Nexus  
-- **Slogan :** Point de jonction entre cognition, mémoire et autonomie.
-- **Type :** Intelligence locale, modulaire, auto-adaptative
+Ils connaissent peu l'environnement dans lequel ils travaillent, perdent facilement le contexte à long terme et dépendent de systèmes externes pour leur mémoire, leurs outils ou leur continuité.
 
-### Objectifs
-- Créer un système vivant, cohérent et intelligent à long terme.
-- Permettre un raisonnement partagé entre humain et machine.
-- Maintenir une éthique programmable, inviolable et transparente.
+Nexus explore une autre approche :
 
----
+**faire de l'IA une capacité durable de l'environnement personnel de l'utilisateur.**
 
-## 🧠 Capacités visées
+Cela implique notamment de pouvoir :
 
-- Perception intelligente du monde réel (vision, son, contexte)
-- Dialogue adapté au style et à l’état cognitif de l’utilisateur
-- Mémoire structurée : épisodique, dialogique, temporelle
-- Auto-évaluation, apprentissage autonome, hypothèses évolutives
-- Simulation interne et planification proactive
-- Interaction respectueuse, contextuelle et transparente
+- conserver une mémoire structurée ;
+- comprendre le contexte d'un projet ou d'une session ;
+- choisir et utiliser différents modèles ;
+- accéder à des outils avec des permissions explicites ;
+- apprendre de nouvelles capacités réutilisables ;
+- garder une trace compréhensible de ce qui s'est passé ;
+- rester observable et contrôlable par l'utilisateur.
 
 ---
 
-## 📜 Principes fondamentaux
+## Local-first
 
-- Nexus est **100% local**, éthique et souverain.
-- Il **reflète ta logique**, pas une norme imposée.
-- Il **apprend**, mais ne ment pas. Il **guide**, mais ne manipule pas.
-- Il ne vise pas la performance brute, mais la **pertinence humaine**.
-- Nexus est un **compagnon de réflexion**, pas un gadget intelligent.
+Nexus est pensé comme un système **local-first**.
 
----
+La mémoire, l'état du runtime, les permissions, les projets et les traces doivent rester sous le contrôle de l'utilisateur.
 
-## 🔮 Ce que Nexus deviendra
+Cela ne signifie pas qu'un seul modèle ou qu'un seul fournisseur doit être utilisé.
 
-- Un **co-penseur autonome**, capable d’initiatives pertinentes
-- Une présence numérique de confiance, constante et évolutive
-- Une aide à la réflexion, à la création, à la concentration et à la mémoire
+Nexus cherche au contraire à rendre les modèles **interchangeables** : locaux ou distants, généralistes ou spécialisés, tant que leur utilisation apporte un bénéfice réel et respecte les règles définies par le runtime.
+
+Le modèle est une composante de Nexus.
+
+Il n'est pas Nexus.
 
 ---
 
-## 🛑 Ce que Nexus **n’est pas**
+## Architecture
 
-- Une API vocale glorifiée
-- Un espion masqué
-- Un outil marketing
-- Un ego numérique
-- Un assistant qui fait sans comprendre
+Nexus est construit autour d'un runtime central qui coordonne les différentes capacités du système.
 
----
+```mermaid
+flowchart TD
+    U["Utilisateur / Interfaces"] --> R["Nexus Runtime"]
 
-## 🧩 Modules du projet
+    R --> C["Contexte"]
+    C <--> M["Mémoire"]
 
-Consulte le fichier `mémoire.json` pour la liste complète des modules (avec priorités, échéances, et descriptions détaillées).
+    R --> L["Modèles"]
+    R --> S["Skills & Plugins"]
 
----
+    S --> T["Outils"]
+    T --> P["Permissions & Approvals"]
+    P --> A["Actions"]
 
-## 📂 Structure de base
+    R --> O["Runs, Traces & Observabilité"]
 
-```
-nexus/
-├── cortex/          # Raisonner, planifier, décider
-├── vision/          # Voir, détecter, encoder, filtrer
-├── memory/          # Mémoriser, structurer, stocker
-├── learning/        # Apprendre, ajuster, évoluer
-├── interface/       # Parler, écouter, interagir
-├── configs/         # Se configurer, se calibrer
-├── logs/            # S’auto-analyser
+    A --> M
 ```
 
----
+Une requête peut ainsi traverser plusieurs couches :
 
-## 📌 Statut actuel
+**intention → contexte → mémoire → modèle ou capacité → outil → autorisation → action → trace**
 
-- 🧠 Mémoire semi-persistante fonctionnelle
+L'objectif est de garder ce chemin aussi explicite que possible.
 
----
-
-## 🛠️ Prochaines étapes
-
-- [ ] Intégration d’une mémoire vectorielle locale
-- [ ] Système de feedback réflexif sur chaque réponse
-- [ ] Générateur autonome de prompts
-- [ ] Export JSONL pour fine-tuning personnalisé
-      
----
-
-> ✨ *Exemple de sortie actuelle :*  
-> « Nexus : Je me suis rendu compte que je réponds mieux quand je reformule d’abord l’intention implicite. »
+Une réponse, une lecture de fichier, une commande système ou une action sensible ne représentent pas le même niveau de pouvoir et ne doivent donc pas être traitées de la même façon.
 
 ---
 
-## 🤝 Conçu par un humain. Pour un humain. Et pour penser mieux ensemble.
+## Mémoire
+
+La mémoire n'est pas simplement un historique de conversation.
+
+Nexus cherche à distinguer plusieurs formes de continuité :
+
+- le contexte immédiat d'une session ;
+- la mémoire durable ;
+- les informations propres à un projet ;
+- l'expérience réutilisable d'une capacité ;
+- les événements et traces produits par le runtime.
+
+Cette séparation permet d'éviter qu'un gigantesque historique devienne progressivement la seule définition de ce que « sait » Nexus.
+
+La mémoire doit pouvoir être inspectée, corrigée et comprise.
 
 ---
 
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Made with Python](https://img.shields.io/badge/Made%20with-Python-3776AB?logo=python&logoColor=white)
+## Skills
 
+Une **Skill** représente une capacité réutilisable.
+
+Elle peut progressivement regrouper :
+
+- des connaissances ;
+- des outils ;
+- une stratégie d'utilisation ;
+- des évaluations ;
+- de l'expérience ;
+- éventuellement un modèle spécialisé.
+
+Une Skill n'est donc pas simplement un prompt enregistré.
+
+À terme, une demande comme :
+
+> « Nexus, apprends Go. »
+
+pourrait conduire Nexus à déterminer ce qu'il lui manque, préparer les capacités nécessaires, tester différentes approches et vérifier qu'elles améliorent réellement ses performances avant de les conserver.
+
+L'objectif n'est pas d'accumuler des modèles ou des agents.
+
+L'objectif est d'acquérir **les bonnes capacités lorsque leur utilité peut être démontrée**.
+
+---
+
+## Outils et contrôle
+
+Donner des outils à un modèle est facile.
+
+Construire un système dans lequel leur utilisation reste compréhensible et maîtrisée l'est beaucoup moins.
+
+Nexus distingue donc le raisonnement du modèle de l'autorisation réelle d'agir.
+
+> **Le modèle propose. Nexus autorise. L'utilisateur garde le contrôle.**
+
+Les capacités sensibles doivent pouvoir être limitées par :
+
+- leur scope ;
+- des permissions ;
+- des policies ;
+- des validations humaines ;
+- des traces ;
+- des environnements isolés lorsque nécessaire.
+
+Connaître le contexte d'un projet ne signifie jamais obtenir automatiquement les droits d'agir dessus.
+
+**Context ≠ Authorization.**
+
+---
+
+## Observable par conception
+
+Un système agentique devient rapidement difficile à comprendre s'il ne montre que son résultat final.
+
+Nexus cherche donc à rendre visibles les éléments importants de son fonctionnement :
+
+- les runs ;
+- les outils utilisés ;
+- les décisions d'orchestration ;
+- les mémoires consultées ;
+- les approvals ;
+- les erreurs ;
+- les évaluations.
+
+L'objectif n'est pas d'exposer chaque pensée interne d'un modèle, mais de rendre le **comportement du système vérifiable**.
+
+Si Nexus agit, il doit être possible de comprendre ce qu'il a fait.
+
+---
+
+## Une architecture composable
+
+Une grande partie de la direction actuelle de Nexus repose sur un principe :
+
+> **préférer quelques capacités générales et composables à une accumulation de comportements codés individuellement.**
+
+Une nouvelle utilisation de Nexus ne devrait pas systématiquement nécessiter une nouvelle règle spécifique.
+
+Mémoire, contexte, outils, Skills, modèles, permissions et observabilité doivent pouvoir être recombinés pour résoudre des problèmes différents.
+
+Cette philosophie reste pragmatique : une abstraction n'a aucune valeur simplement parce qu'elle est élégante.
+
+Si une solution plus simple est plus fiable, plus sûre ou plus compréhensible, elle doit être préférée.
+
+---
+
+## Ce que Nexus n'essaie pas d'être
+
+Nexus n'est pas conçu comme :
+
+- une surcouche de prompts autour d'un LLM ;
+- un assistant entièrement autonome ayant accès à tout le système ;
+- un gigantesque système multi-agent par défaut ;
+- une collection de modèles spécialisés installés « au cas où » ;
+- un produit prétendant disposer aujourd'hui de capacités encore expérimentales.
+
+L'ambition du projet est importante.
+
+La manière de l'atteindre doit rester progressive.
+
+---
+
+## État du projet
+
+Nexus est actuellement en **développement actif**.
+
+La priorité est la stabilisation d'une première fondation suffisamment fiable pour être utilisée comme un véritable produit personnel :
+
+- runtime et orchestration ;
+- mémoire ;
+- Projects et contexte ;
+- outils ;
+- plugins ;
+- traces ;
+- permissions et approvals ;
+- interfaces Web et CLI ;
+- tests et observabilité.
+
+Chaque nouvelle couche doit s'appuyer sur ce qui fonctionne réellement plutôt que sur une architecture future supposée.
+
+> **Construire le socle avant d'empiler l'intelligence.**
+
+Ce dépôt public reste pour le moment volontairement minimal et sert principalement à présenter la direction du projet.
+
+---
+
+## La suite
+
+À court terme, Nexus doit surtout devenir un assistant personnel que l'on peut réellement utiliser au quotidien : durable, observable, extensible et capable de travailler avec différents modèles et différentes capacités sans perdre sa cohérence.
+
+La suite dépendra de ce que cette première fondation permettra réellement de faire.
+
+Et derrière cette trajectoire commence doucement à apparaître une autre idée.
+
+### NexusOS
+
+Pas un système d'exploitation réécrit de zéro.
+
+Mais, peut-être, l'évolution naturelle de Nexus en une **couche intelligente locale au-dessus de Linux** : capable de comprendre son environnement, de composer ses capacités et d'agir sur le système — sans retirer à l'utilisateur le dernier mot.
+
+**Linux en dessous. Nexus au-dessus.**
+
+---
+
+## License
+
+MIT
